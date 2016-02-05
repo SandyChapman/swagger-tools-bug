@@ -1,0 +1,26 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Hello World App
+host: localhost:10010
+basePath: /
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /hello:
+    x-swagger-router-controller: hello_world
+    get:
+      operationId: hello
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              type: string
+              pattern: ab+c
