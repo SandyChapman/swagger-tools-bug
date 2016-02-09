@@ -24,3 +24,21 @@ paths:
             items:
               type: string
               pattern: ab+c
+    post:
+      operationId: post_hello
+      parameters:
+        - name: tag
+          in: body
+          description: The tag to create.
+          schema:
+            type: string
+            pattern: ab+c
+          required: true
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              type: string
+              pattern: ab+c
